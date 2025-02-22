@@ -1,0 +1,106 @@
+@import "root";
+
+// Mixin untuk button styling
+@mixin button-style($bg-color, $text-color, $hover-bg, $hover-text) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: 2px solid $bg-color;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: $hover-bg;
+    color: $hover-text;
+    border-color: $hover-bg;
+  }
+}
+
+// Primary Button
+.btn-primary {
+  @include button-style(
+    $primary-color,
+    white,
+    darken($primary-color, 10%),
+    white
+  );
+}
+
+// Secondary Button
+.btn-secondary {
+  @include button-style(
+    $secondary-color,
+    white,
+    darken($secondary-color, 10%),
+    white
+  );
+}
+
+// Dark Button
+.btn-dark {
+  @include button-style($dark-color, white, lighten($dark-color, 10%), white);
+}
+
+// Light Button
+.btn-light {
+  @include button-style(
+    $light-color,
+    $dark-color,
+    darken($light-color, 10%),
+    $dark-color
+  );
+}
+
+// Outline Buttons
+@mixin button-outline($border-color, $text-color, $hover-bg, $hover-text) {
+  background: transparent;
+  color: $text-color;
+  border: 2px solid $border-color;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: $hover-bg;
+    color: $hover-text;
+  }
+}
+
+.btn-outline-primary {
+  @include button-outline(
+    $primary-color,
+    $primary-color,
+    $primary-color,
+    white
+  );
+}
+
+.btn-outline-secondary {
+  @include button-outline(
+    $secondary-color,
+    $secondary-color,
+    $secondary-color,
+    white
+  );
+}
+
+.btn-outline-dark {
+  @include button-outline($dark-color, $dark-color, $dark-color, white);
+}
+
+.btn-outline-light {
+  @include button-outline(
+    $light-color,
+    $light-color,
+    $light-color,
+    $dark-color
+  );
+}

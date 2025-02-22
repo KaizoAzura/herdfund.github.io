@@ -1,0 +1,48 @@
+@import "button";
+@import "root";
+
+// style
+
+// navbar
+.navbar {
+  transition: 0.3s;
+  &.scrolled {
+    background: $dark-color; // Warna primary
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+  }
+}
+
+// carousel
+.carousel-item {
+  position: relative;
+  height: 100vh;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  // Overlay
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.6),
+      rgba(8, 167, 141, 0.3)
+    ); // Overlay gelap (0.5 = 50% transparan)
+    z-index: 1; // Pastikan overlay di atas gambar
+  }
+
+  .carousel-caption {
+    position: absolute;
+    z-index: 2; // Pastikan caption di atas overlay
+  }
+}
