@@ -1,11 +1,12 @@
 // Font
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 // Color
 $primary-color: #08a78d;
 $secondary-color: #1e4d91;
 $dark-color: #223740;
 $light-color: #fcfcec;
+$grayish-white: #f0f0f0;
 
 // Font Size
 // Breakpoint Bootstrap 5.3
@@ -57,9 +58,7 @@ $font-sizes: (
       #{$property}: $color !important;
     }
 
-    @each $breakpoint,
-      $size in (sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px)
-    {
+    @each $breakpoint, $size in $grid-breakpoints {
       @media (min-width: $size) {
         .#{$prefix}-#{$breakpoint}-#{$name} {
           #{$property}: $color !important;
@@ -75,6 +74,7 @@ $colors: (
   secondary: $secondary-color,
   dark: $dark-color,
   light: $light-color,
+  grayish-white: $grayish-white,
 );
 
 // Generate class untuk text color
@@ -83,9 +83,27 @@ $colors: (
 // Generate class untuk background color
 @include responsive-colors("bg", "background-color", $colors);
 
+// Generate kelas width w-1 hingga w-100
+@for $i from 1 through 100 {
+  .w-#{$i} {
+    width: #{($i * 1%)} !important;
+  }
+}
+
+// Generate kelas responsif width w-sm-1 hingga w-xxl-100
+@each $breakpoint, $value in $grid-breakpoints {
+  @media (min-width: #{$value}) {
+    @for $i from 1 through 100 {
+      .w-#{$breakpoint}-#{$i} {
+        width: #{($i * 1%)} !important;
+      }
+    }
+  }
+}
+
 // Global Styles
 body {
   background-color: $light-color;
   color: $dark-color;
-  font-family: "Poppins", sans-serif;
+  font-family: "Rubik", sans-serif;
 }

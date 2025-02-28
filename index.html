@@ -46,179 +46,96 @@
   </head>
   <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand fw-bold fs-5 text-light" href="#"
-          ><img
-            src="dist/img/logo.png"
-            width="55"
-            height="55s"
-            alt="Logo"
-          />HERD<span class="text-primary">FUND</span></a
+    <nav class="navbar navbar-expand-lg px-2 fixed-top">
+      <div class="container bg-grayish-white p-2 rounded shadow-sm">
+        <a class="navbar-brand fw-bold fs-4 fs-lg-5" href="#"
+          >HERD<span class="text-primary">FUND</span></a
         >
         <button
-          class="btn btn-outline-light d-lg-none fs-5 px-2 py-1"
+          class="btn d-lg-none btn-outline-dark px-2 py-1 fs-5"
           type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <i class="ri-menu-line"></i>
         </button>
-        <div
-          class="offcanvas offcanvas-end"
-          tabindex="-1"
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-        >
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title fw-bold fs-4" id="offcanvasNavbarLabel">
-              HERD<span class="text-primary">FUND</span>
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav mx-auto">
-              <li class="nav-item">
-                <a
-                  class="nav-link fs-3 fs-md-5 fs-lg-6 fs-xl-7 text-lg-light"
-                  href="#!"
-                  >How it Works</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link fs-3 fs-md-5 fs-lg-6 fs-xl-7 text-lg-light"
-                  href="#!"
-                  >Projects</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link fs-3 fs-md-5 fs-lg-6 fs-xl-7 text-lg-light"
-                  href="#!"
-                  >About Us</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link fs-3 fs-md-5 fs-lg-6 fs-xl-7 text-lg-light"
-                  href="#!"
-                  >FAQ</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link fs-3 fs-md-5 fs-lg-6 fs-xl-7 text-lg-light"
-                  href="#!"
-                  >Contact</a
-                >
-              </li>
-            </ul>
-            <ul class="navbar-nav mt-3 mt-lg-0">
-              <li class="nav-item">
-                <a
-                  href="#!"
-                  class="nav-link fs-lg-6 fs-xl-7 btn btn-outline-primary px-4 py-2 w-100"
-                  >Login</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  href="#!"
-                  class="nav-link fs-lg-6 fs-xl-7 btn btn-light px-4 py-2 ms-lg-1 mt-2 mt-lg-0 w-100"
-                  >Register</a
-                >
-              </li>
-            </ul>
-          </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+            <li class="nav-item">
+              <a
+                class="nav-link fs-5 fs-lg-7 active"
+                aria-current="page"
+                href="#!"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5 fs-lg-7" href="#!">How it Works</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5 fs-lg-7" href="#!">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5 fs-lg-7" href="#!">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5 fs-lg-7" href="#!">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5 fs-lg-7" href="#!">Support</a>
+            </li>
+          </ul>
+          <!-- menu login -->
+          <ul class="navbar-nav text-center">
+            <li class="nav-item me-lg-1">
+              <a
+                href="#!"
+                class="nav-link btn btn-outline-dark py-2 px-4 fs-6 fs-lg-7 mb-2 mb-lg-0 w-100 w-sm-50 w-lg-100"
+                >Login</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="#!"
+                class="nav-link btn btn-dark py-2 px-4 fs-6 fs-lg-7 mb-2 mb-lg-0 w-100 w-sm-50 w-lg-100"
+                >Register</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
 
-    <!-- header -->
-    <header>
-      <div class="container-fluid px-0">
-        <div id="carouselExampleCaptions" class="carousel slide">
-          <div class="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="0"
-              class="active"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="2"
-              aria-label="Slide 3"
-            ></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img
-                src="dist/img/slider-1.jpg"
-                class="d-block w-100"
-                alt="slider-1"
-              />
-              <div class="carousel-caption text-start text-md-center">
-                <h5 class="fs-4 fs-lg-2 fw-bold">
-                  Invest in Sustainable Farming
-                </h5>
-                <p class="fs-7 fs-lg-6">
-                  Start your investment today and be part of the transformation
-                  in the livestock industry.
-                </p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img
-                src="dist/img/slider-2.jpg"
-                class="d-block w-100"
-                alt="slider-2"
-              />
-              <div class="carousel-caption text-start text-md-center">
-                <h5 class="fs-4 fs-lg-2 fw-bold">Smart Livestock Management</h5>
-                <p class="fs-7 fs-lg-6">
-                  With modern farming techniques, we maintain high-quality
-                  livestock for sustainable and profitable growth.
-                </p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img
-                src="dist/img/slider-3.jpg"
-                class="d-block w-100"
-                alt="slider-3"
-              />
-              <div class="carousel-caption text-start text-md-center">
-                <h5 class="fs-4 fs-lg-2 fw-bold">
-                  Profitable and Impactful Investment
-                </h5>
-                <p class="fs-7 fs-lg-6">
-                  Join us in revolutionizing livestock investment with
-                  transparency and shared success.
-                </p>
+    <!-- Hero Section -->
+    <section
+      class="hero d-flex flex-column align-items-center justify-content-center vh-100"
+    >
+      <div class="container-fluid">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col text-center px-0">
+              <h1 class="fw-bold fs-2 fs-lg-1 text-dark w-lg-75 mx-auto">
+                Invest in Sustainable Livestock Farming
+              </h1>
+              <p class="fs-7 fs-lg-6 text-secondary mt-3 w-lg-60 mx-auto">
+                Join HerdFund and be part of the future of agriculture. Fund
+                livestock projects and earn sustainable returns while supporting
+                farmers worldwide.
+              </p>
+              <div class="mt-4">
+                <a href="#!" class="btn btn-dark px-4 py-2 fs-6 fs-lg-5"
+                  >Get Started</a
+                >
               </div>
             </div>
           </div>
         </div>
       </div>
-    </header>
+    </section>
+
     <!-- Bootstrap 5.3 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- custom js -->
